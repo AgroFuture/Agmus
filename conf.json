@@ -1,0 +1,15 @@
+{
+    "app_port": "8085",
+    "tania_persistence_engine": "sqlite",
+    "demo_mode": true,
+    "upload_path_area": "uploads/areas",
+    "upload_path_crop": "uploads/crops",
+    "sqlite_path": "db/sqlite/agmus.db",
+    "mysql_host": "127.0.0.1",
+    "mysql_port": "3306",
+    "mysql_dbname": "my_farm",
+    "mysql_user": "developer",
+    "mysql_password": "password",
+    "redirect_uri": ["http://localhost:8085", "http://127.0.0.1:8085"],
+    "client_id": "f0ece679-3f53-463e-b624-73e83049d6ac"
+  }

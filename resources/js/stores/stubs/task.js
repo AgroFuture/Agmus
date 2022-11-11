@@ -1,0 +1,18 @@
+export default {
+  uid: '',
+  description: '',
+  due_date: '',
+  priority: '',
+  type: '',
+  source_area_id: '',
+  destination_area_id: '',
+  quantity: '',
+  units: '',
+  asset_id: '',
+  category: '',
+  title: '',
+  fertilizer: '',
+  pesticide: '',
+  watering_date: '',
+  crops: [],
+}
