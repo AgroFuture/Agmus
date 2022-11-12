@@ -12,3 +12,6 @@ self.addEventListener('activate', () => {
     }
   });
 });
+
+
+window.FormData("")

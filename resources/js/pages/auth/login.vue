@@ -40,6 +40,28 @@
               span.help-block.text-danger(
                 v-show="errors.has('password')"
               ) {{ errors.first('password') }}
+            .d-flex.mx-1.w-75.justify-content-between.my-3
+              .form-check
+                input.form-check-input#flexRadioDefault1(
+                  type="radio"
+                  name="flexRadioDefault"
+                )
+                label.form-check-label(
+                  for="flexRadioDefault1"
+                )
+                translate Fermer
+
+              .form-check
+                input.form-check-input#flexRadioDefault1(
+                  type="radio"
+                  name="flexRadioDefault"
+                  checked
+                )
+                label.form-check-label(
+                for="flexRadioDefault2"
+                )
+                  translate Ishchi
+
             .form-group.text-center
               BtnLogin
 </template>
