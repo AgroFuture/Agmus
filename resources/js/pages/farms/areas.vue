@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container-fluid.bottom-space
+.container-fluid.bottom-space
     .row
       .col
         h3.title-page

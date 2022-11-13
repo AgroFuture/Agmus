@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container-fluid.container-intro
+.container-fluid.container-intro
     .row
       .col-xs-12.col-sm-12.col-md-6.offset-md-3.col-lg-4.offset-lg-4
         .text-center

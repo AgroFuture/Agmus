@@ -19,7 +19,12 @@ const router = new VueRouter({
       name: 'AuthLogin',
       component: () => import('./pages/auth/login.vue'),
     },
-
+    {
+      path:' /intro/worker',
+      name: 'IntroWorkerCreate',
+      meta: { requiresAuth: true },
+      component: () => import('./pages/intro/worker.vue'),
+    },
     // intro
     {
       path: '/intro/farm',

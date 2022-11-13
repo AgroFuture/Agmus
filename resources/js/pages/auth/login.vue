@@ -45,6 +45,7 @@
                 input.form-check-input#flexRadioDefault1(
                   type="radio"
                   name="flexRadioDefault"
+                  @change="FindUser('FARMER')"
                 )
                 label.form-check-label(
                   for="flexRadioDefault1"
@@ -56,6 +57,7 @@
                   type="radio"
                   name="flexRadioDefault"
                   checked
+                  @change="FindUser('WORKER')"
                 )
                 label.form-check-label(
                 for="flexRadioDefault2"
@@ -74,9 +76,10 @@ import BtnLogin from '../../components/common/btn-login.vue';
 export default {
   name: 'Login',
   components: {
-    BtnLogin,
+    BtnLogin
   },
   data() {
+    let statuss="";
     return {
       username: '',
       password: '',
@@ -109,10 +112,14 @@ export default {
         }
       });
     },
+    FindUser(key){
+    statuss=key;
+    },
     login() {
       this.userLogin({
         username: this.username,
         password: this.password,
+        status: this.statuss,
         client_id: process.env.CLIENT_ID,
         response_type: 'token',
         redirect_uri: `${window.location.protocol}//${window.location.host}`,
@@ -127,10 +134,12 @@ export default {
         this.fetchFarmTypes(),
         this.fetchFarmInventories(),
       ]).then(() => {
-        if (this.IsNewUser === true) {
+        if (this.IsNewUser === true && this.status === 'FARMER') {
           this.$router.push({ name: 'IntroFarmCreate' });
-        } else {
-          this.$router.push({ name: 'Home' });
+    } else if(this.IsNewUser === true && this.status === 'WORKER' ) {
+          this.$router.push({ name: 'IntroWorkerCreate' });
+        }else{
+          this.$router.push({name: 'Home'})
         }
         Nprogres.done();
       }).catch(error => error);
